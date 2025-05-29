@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八大菜系，各有魅力</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f5f0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #b71c1c;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .author {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 0;
+            font-weight: normal;
+        }
+        .translate-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 15px;
+            background-color: #b71c1c;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .translate-btn:hover {
+            background-color: #8e1616;
+        }
+        .cuisine-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .cuisine-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .cuisine-card:hover {
+            transform: translateY(-5px);
+        }
+        .cuisine-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .cuisine-info {
+            padding: 20px;
+        }
+        .cuisine-name {
+            color: #b71c1c;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">八大菜系，各有魅力</h1>
+        <p class="subtitle" id="subtitle">探索中国饮食文化的精髓与多样性</p>
+        <p class="author" id="author">作者：林子航</p>
+        <a class="translate-btn" id="translate-btn">ここをクリックして日本語に翻訳</a>
+    </header>
+
+    <div class="cuisine-container">
+        <!-- 鲁菜 -->
+        <div class="cuisine-card">
+            <img src="https://img2.baidu.com/it/u=953644718,2891391354&fm=253&fmt=auto&app=138&f=JPEG?w=734&h=500" alt="鲁菜代表：九转大肠" class="cuisine-img" id="cuisine-1-img">
+            <div class="cuisine-info">
+                <h2 class="cuisine-name" id="cuisine-1-name">鲁菜</h2>
+                <p id="cuisine-1-desc">鲁菜起源于山东，是中国八大菜系之首，以咸鲜为主，讲究火候精湛。代表菜有九转大肠、葱烧海参等，注重原料品质，擅长爆、炒、烧、炸等技法，具有宫廷菜的特点。</p>
+            </div>
+        </div>
+
+        <!-- 川菜 -->
+        <div class="cuisine-card">
+            <img src="https://img0.baidu.com/it/u=1648363091,3151297453&fm=253&fmt=auto&app=138&f=JPEG?w=515&h=500" alt="川菜代表：麻婆豆腐" class="cuisine-img" id="cuisine-2-img">
+            <div class="cuisine-info">
+                <h2 class="cuisine-name" id="cuisine-2-name">川菜</h2>
+                <p id="cuisine-2-desc">川菜以四川为中心，以麻辣著称，讲究"一菜一格，百菜百味"。代表菜有麻婆豆腐、宫保鸡丁等，善用花椒、辣椒调味，烹饪技法多样，味道丰富多变，深受大众喜爱。</p>
+            </div>
+        </div>
+
+        <!-- 粤菜 -->
+        <div class="cuisine-card">
+            <img src="https://img0.baidu.com/it/u=2655315749,920764337&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500" alt="粤菜代表：白切鸡" class="cuisine-img" id="cuisine-3-img">
+            <div class="cuisine-info">
+                <h2 class="cuisine-name" id="cuisine-3-name">粤菜</h2>
+                <p id="cuisine-3-desc">粤菜源自广东，追求食材本味，讲究清而不淡，鲜而不俗。代表菜有白切鸡、烧鹅等，烹饪技法精细，注重火候，早茶文化更是粤菜的一大特色，享誉海内外。</p>
+            </div>
+        </div>
+
+        <!-- 苏菜 -->
+        <div class="cuisine-card">
+            <img src="https://img1.baidu.com/it/u=4074078671,917619125&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=547" alt="苏菜代表：松鼠桂鱼" class="cuisine-img" id="cuisine-4-img">
+            <div class="cuisine-info">
+                <h2 class="cuisine-name" id="cuisine-4-name">苏菜</h2>
+                <p id="cuisine-4-desc">苏菜以江苏为中心，分为淮扬、金陵、苏锡等流派，讲究刀工精细，注重原汁原味。代表菜有松鼠桂鱼、狮子头等，口味平和，咸甜适中，造型美观，有"东南第一佳味"之称。</p>
+            </div>
+        </div>
+
+        <!-- 闽菜 -->
+        <div class="cuisine-card">
+            <img src="https://img1.baidu.com/it/u=2249422909,2372657179&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750" alt="闽菜代表：佛跳墙" class="cuisine-img" id="cuisine-5-img">
+            <div class="cuisine-info">
+                <h2 class="cuisine-name" id="cuisine-5-name">闽菜</h2>
+                <p id="cuisine-5-desc">闽菜源于福建，以海鲜见长，讲究汤菜制作，味道清鲜醇和。代表菜有佛跳墙、荔枝肉等，善用红糟、虾油等特色调味料，烹饪技法独特，具有浓厚的海洋文化特色。</p>
+            </div>
+        </div>
+
+        <!-- 浙菜 -->
+        <div class="cuisine-card">
+            <img src="https://img1.baidu.com/it/u=1793839005,1333914576&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=601" alt="浙菜代表：东坡肉" class="cuisine-img" id="cuisine-6-img">
+            <div class="cuisine-info">
+                <h2 class="cuisine-name" id="cuisine-6-name">浙菜</h2>
+                <p id="cuisine-6-desc">浙菜以浙江为中心，分为杭帮菜、宁波菜等流派，讲究轻油轻酱，清鲜爽脆。代表菜有东坡肉、龙井虾仁等，注重时令食材，刀工精细，口味鲜美，富有江南水乡特色。</p>
+            </div>
+        </div>
+
+        <!-- 湘菜 -->
+        <div class="cuisine-card">
+            <img src="https://img2.baidu.com/it/u=562295014,3010416086&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667" alt="湘菜代表：剁椒鱼头" class="cuisine-img" id="cuisine-7-img">
+            <div class="cuisine-info">
+                <h2 class="cuisine-name" id="cuisine-7-name">湘菜</h2>
+                <p id="cuisine-7-desc">湘菜源自湖南，以香辣著称，讲究油重色浓，口味多变。代表菜有剁椒鱼头、毛氏红烧肉等，善用熏腊制品和辣椒调味，烹饪技法多样，味道浓郁，具有鲜明的地方特色。</p>
+            </div>
+        </div>
+
+        <!-- 徽菜 -->
+        <div class="cuisine-card">
+            <img src="https://img2.baidu.com/it/u=1896171799,681645880&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" alt="徽菜代表：臭鳜鱼" class="cuisine-img" id="cuisine-8-img">
+            <div class="cuisine-info">
+                <h2 class="cuisine-name" id="cuisine-8-name">徽菜</h2>
+                <p id="cuisine-8-desc">徽菜源于安徽徽州地区，以山珍野味见长，讲究重油重色重火功。代表菜有臭鳜鱼、毛豆腐等，善用火腿提味，注重原汁原味，烹饪技法独特，具有浓厚的乡土气息。</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footer-text">© 2023 中国八大菜系文化网 | 探索中华饮食文化的博大精深</p>
+    </footer>
+
+    <script>
+        document.getElementById('translate-btn').addEventListener('click', function() {
+            const btn = this;
+            if(btn.textContent === 'ここをクリックして日本語に翻訳') {
+                // 切换到日文
+                document.getElementById('main-title').textContent = '中国八大料理、それぞれの魅力';
+                document.getElementById('subtitle').textContent = '中国飲食文化の真髄と多様性を探る';
+                document.getElementById('author').textContent = '作者：林子航';
+                btn.textContent = '中文に戻す';
+                document.getElementById('footer-text').textContent = '© 2023 中国八大料理文化ネット | 中国飲食文化の博大精深を探求';
+                
+                // 菜系名称和描述
+                document.getElementById('cuisine-1-name').textContent = '山東料理（魯菜）';
+                document.getElementById('cuisine-1-desc').textContent = '山東省発祥の八大料理の筆頭。塩味と旨味が特徴で、火加減を重視。代表料理は「九転大腸」「葱焼海参」など。素材の品質にこだわり、爆炒（強火で炒める）や揚げ物の技法に長ける。宮廷料理の特徴を持つ。';
+                document.getElementById('cuisine-1-img').alt = '山東料理代表：九転大腸';
+                
+                document.getElementById('cuisine-2-name').textContent = '四川料理（川菜）';
+                document.getElementById('cuisine-2-desc').textContent = '四川省を中心とした麻辣味が特徴の料理。「一料理一スタイル、百料理百の味」がモットー。代表料理は「麻婆豆腐」「宮保鶏丁」など。花椒や唐辛子を巧みに使い、多様な調理法で味のバリエーションが豊富。';
+                document.getElementById('cuisine-2-img').alt = '四川料理代表：麻婆豆腐';
+                
+                document.getElementById('cuisine-3-name').textContent = '広東料理（粤菜）';
+                document.getElementById('cuisine-3-desc').textContent = '広東省発祥で素材の本来の味を重視。あっさりしているが深みがあり、新鮮で上品な味わい。代表料理は「白切鶏」「焼きガチョウ」など。調理技術が繊細で火加減を重視。飲茶文化は広東料理の大きな特徴で、世界的に有名。';
+                document.getElementById('cuisine-3-img').alt = '広東料理代表：白切鶏';
+                
+                document.getElementById('cuisine-4-name').textContent = '江蘇料理（蘇菜）';
+                document.getElementById('cuisine-4-desc').textContent = '江蘇省を中心に、淮揚、金陵、蘇錫などの流派がある。包丁さばきが繊細で、素材の本来の味を大切にする。代表料理は「松鼠桂魚」「獅子頭」など。味は穏やかで甘辛のバランスが良く、見た目も美しい。「東南第一の美味」と呼ばれる。';
+                document.getElementById('cuisine-4-img').alt = '江蘇料理代表：松鼠桂魚';
+                
+                document.getElementById('cuisine-5-name').textContent = '福建料理（閩菜）';
+                document.getElementById('cuisine-5-desc').textContent = '福建省発祥で海鮮料理が得意。スープ料理に定評があり、味はあっさりしていながらコクがある。代表料理は「佛跳牆」「荔枝肉」など。紅麹やエビ油などの独特な調味料を使い、調理法もユニークで、濃厚な海洋文化の特色がある。';
+                document.getElementById('cuisine-5-img').alt = '福建料理代表：佛跳牆';
+                
+                document.getElementById('cuisine-6-name').textContent = '浙江料理（浙菜）';
+                document.getElementById('cuisine-6-desc').textContent = '浙江省を中心に、杭州料理、寧波料理などの流派がある。油や醤油を控えめにし、あっさりとした歯ごたえを重視。代表料理は「東坡肉」「龍井蝦仁」など。旬の食材を使い、包丁さばきが繊細で、味は鮮やか。江南の水郷らしい特色がある。';
+                document.getElementById('cuisine-6-img').alt = '浙江料理代表：東坡肉';
+                
+                document.getElementById('cuisine-7-name').textContent = '湖南料理（湘菜）';
+                document.getElementById('cuisine-7-desc').textContent = '湖南省発祥で香辛料の効いた辛味が特徴。油を多めに使い色濃い味付けで、味の変化に富む。代表料理は「辛子漬け魚の頭」「毛氏紅焼肉」など。燻製や塩漬けの食材と唐辛子を巧みに使い、多様な調理法で濃厚な味わい。地方色が鮮明。';
+                document.getElementById('cuisine-7-img').alt = '湖南料理代表：辛子漬け魚の頭';
+                
+                document.getElementById('cuisine-8-name').textContent = '安徽料理（徽菜）';
+                document.getElementById('cuisine-8-desc').textContent = '安徽省徽州地区発祥で山の幸やジビエが得意。油を多用し色濃く、火加減を重視。代表料理は「臭い桂魚」「毛豆腐」など。ハムで味を引き立て、素材本来の味を大切にする。独特な調理法で、素朴な田舎の風情が感じられる。';
+                document.getElementById('cuisine-8-img').alt = '安徽料理代表：臭い桂魚';
+            } else {
+                // 刷新页面回到中文
+                location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
